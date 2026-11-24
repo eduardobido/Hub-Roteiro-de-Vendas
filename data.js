@@ -288,3 +288,33 @@ DEMO.corridor=[[-53.519,-26.725],[-53.36,-26.54],[-53.21,-26.50],[-53.08,-26.36]
 
 
 DEMO.clients.forEach(c=>DEMO.cities[c.city+', '+c.uf]??=c.coords);
+
+DEMO.members.push(
+  {id:'joao',name:'João Almeida',region:'Sudoeste do Paraná',color:'#406778'},
+  {id:'lara',name:'Lara Freitas',region:'Alto Paranapanema',color:'#855e37'},
+  {id:'marcos',name:'Marcos Vieira',region:'Meio-Oeste catarinense',color:'#4f7163'}
+);
+const territories=[
+ ['Chapecó','Xaxim','Maravilha'],['Ponta Grossa','Carambeí','Castro'],['Sorocaba','Tatuí','Boituva'],
+ ['Cascavel','Toledo','Medianeira'],['Lages','Curitibanos','Campos Novos'],['Campinas','Jundiaí','Indaiatuba'],
+ ['Blumenau','Ibirama','Rio do Sul'],['Pato Branco','Guarapuava','Irati'],['Itapeva','Itararé','Capão Bonito'],
+ ['Concórdia','Chapecó','Campos Novos']
+];
+const enterprise=['Avícola','Frigorífico','Agroindústria','Alimentos'];
+const territoryNames=['Rio Branco','Campos Altos','Boa Vista','Vale Azul','Santa Rita','Bela Serra','Novo Horizonte','Campo Verde','Rio Dourado','Boa Esperança'];
+const units=['Central','Norte','Sul','Leste','Oeste'];
+for(let i=0;DEMO.clients.length<180;i++){
+  const region=i%territories.length,unit=Math.floor(i/territories.length);
+  const city=territories[region][unit%3],base=DEMO.clients.find(c=>c.city===city);
+  const kind=(region+unit)%enterprise.length,angle=i*2.39996,radius=.034+(unit%6)*.023;
+  DEMO.clients.push({id:'unidade'+i,name:enterprise[kind]+' '+territoryNames[region]+' · '+units[Math.floor(unit/4)],
+    city,uf:base.uf,coords:[base.coords[0]+radius*Math.cos(angle),base.coords[1]+radius*Math.sin(angle)],
+    segment:['Aves','Suínos','Bovinos','Alimentos'][kind],owner:DEMO.members[region].id,
+    equipment:2+(i*7)%11,last:'2026-10-'+String(1+i%26).padStart(2,'0'),
+    reason:['Revisão preventiva próxima','Avaliação de capacidade instalada','Retorno após atendimento técnico','Treinamento da operação'][unit%4]});
+}
+for(const [i,id] of ['ines','joao','lara','marcos'].entries()){
+  const group=DEMO.clients.filter(c=>c.owner===id);
+  const start=group[0],last=group.find(c=>c.city!==start.city);
+  DEMO.programs.push([id,start.city+', '+start.uf,last.city+', '+last.uf,[start.id,last.id],i+1]);
+}
