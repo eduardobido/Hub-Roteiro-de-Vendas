@@ -8,20 +8,22 @@
 <a class="skip" href="#main">Ir para o conteúdo</a>
 <header class="topbar">
 <div class="header-context"><button class="icon-button nav-toggle" id="menuToggle" aria-label="Abrir navegação" aria-controls="sidebar" aria-expanded="false"><span data-icon="menu"></span></button><span class="app-name">Pós-vendas</span><span class="breadcrumb-separator">/</span><span id="breadcrumb">Planejar viagem</span></div>
-<a class="brand" href="#planejar" aria-label="Torfresma, início"><img src="assets/brand-name.png" alt="Torfresma" width="160" height="28"></a>
+<a class="brand" href="#equipe" aria-label="Torfresma, início"><img src="assets/brand-name.png" alt="Torfresma" width="160" height="28"></a>
 <span class="environment"><i></i>MVP com dados simulados</span>
 </header>
 <button class="sidebar-overlay" id="sidebarOverlay" aria-label="Fechar navegação" hidden></button>
 <aside class="sidebar" id="sidebar">
 <div class="workspace"><div class="workspace-symbol"><img src="assets/brand-icon.png" alt="" width="31" height="25"></div><div><strong>Roteiro de viagens</strong><small>Relacionamento em campo</small></div></div>
 <nav aria-label="Navegação principal">
+<a href="#equipe" data-nav="equipe"><span data-icon="building"></span>Visão da equipe</a>
+<a href="#mapa" data-nav="mapa"><span data-icon="map"></span>Mapa de clientes</a>
 <a href="#planejar" data-nav="planejar"><span data-icon="route"></span>Planejar viagem</a>
 <a href="#viagens" data-nav="viagens"><span data-icon="briefcase"></span>Roteiros salvos<span id="tripCount" class="nav-count">3</span></a>
 
-</nav>
+</nav><section class="team-side"><h2>Minha equipe</h2><div id="teamList"></div></section>
 <div class="sidebar-bottom"><a class="future-link" href="#melhorias" data-nav="melhorias"><span data-icon="list"></span><span>Possíveis melhorias<small>Ideias para depois da validação</small></span></a></div>
 </aside>
 <div class="shell"><main id="main" tabindex="-1"></main><footer class="app-footer"><span>Roteiros e registros salvos neste navegador.</span><span>Pós-vendas · TORFRESMA</span></footer></div>
 <div id="overlay-root"></div><div id="toast" role="status" aria-live="polite"></div>
-<script src="data.js"></script><script src="app.js"></script>
+<script src="data.js"></script><script src="team.js"></script><script src="app.js"></script>
 </body></html>
