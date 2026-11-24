@@ -87,3 +87,35 @@ body.nav-open{overflow:hidden}
 .journey-brief .brief-path{flex-basis:auto}
 @media(max-width:1050px){.essential-review{grid-template-columns:1fr}.essential-summary{display:block}.journey-brief .button{margin-left:auto}}
 @media(max-width:650px){.essential-review{padding:21px 18px;gap:20px;min-height:300px}.essential-review h2{font-size:18px}.essential-stops strong{font-size:14px}.essential-stops small{font-size:12px}.journey-brief .brief-path{flex-basis:100%}.journey-brief .brief-meta{order:0;border:0;width:auto;padding:0;gap:12px}.journey-brief .button{font-size:11px;min-height:36px}.future-intro{padding:21px}.future-intro p{font-size:14px}.future-group summary{padding:19px 17px;flex-wrap:wrap;gap:10px}.future-group summary strong{font-size:14px;max-width:230px}.future-group summary>span{margin-left:23px}.future-content{padding-inline:20px}.future-content ul{grid-template-columns:1fr}.future-content h3{font-size:14px}.essential-summary{padding:20px}.client-context{padding:16px;gap:15px}.client-context strong{font-size:14px}.sidebar-bottom{padding-top:30px}}
+
+/* The trip header and field agenda share the visual hierarchy of a travel sheet. */
+main{max-width:1540px}
+.journey-brief{background:#202922;color:#fff;border:0;border-radius:10px;padding:24px 26px;position:relative;overflow:hidden}
+.journey-brief:before{content:"";position:absolute;inset:0 auto 0 0;width:5px;background:var(--lime)}
+.brief-place small{color:#c2d0c0;font-size:12px}.brief-place strong{font:550 clamp(17px,1.45vw,24px)/1.2 var(--display)}
+.brief-path>.icon{color:var(--lime)}.brief-meta,.brief-meta .icon{color:#e2ebdf}
+.journey-brief .segment-badge{background:#344530;border-color:#587245;color:#e2fac9}
+.journey-brief .button{background:transparent;border-color:#637260;color:#fff}.journey-brief .button:hover{background:#354432}
+.explore-grid{height:clamp(415px,52vh,560px);grid-template-columns:minmax(260px,1fr) minmax(320px,40%)}
+.client-panel-head h2{font-family:var(--display);font-size:21px}.sort-label{display:flex;align-items:center;gap:8px;color:#515f56;font-size:12px;margin-top:12px}
+.sort-label select,.stop-tools select{font:inherit;color:#243326;background:#fff;border:1px solid #c6d0c4;border-radius:4px;padding:6px}
+.client-reason{display:flex;align-items:center;gap:8px;color:#364539}.signal{flex:none;width:7px;height:7px;background:#73956b;border-radius:50%}.signal.high{background:#ae651b}
+.map-switch{display:none}.map-road{stroke:#c3cfc1}.route-underlay{stroke:#384f31}.client-card.selected{background:#f2f8e9}
+.essential-review{align-items:start;grid-template-columns:minmax(0,1fr) minmax(215px,30%)}
+.day-heading{display:flex;gap:14px;align-items:baseline;padding:12px 0 8px;margin:22px 0 4px;border-bottom:2px solid #344a36;font:600 18px var(--display)}
+.day-heading span,.stop-city{font:400 12px var(--body);color:#53685a}.leg,.field-stop{display:flex;align-items:baseline;gap:12px}
+.leg{font-size:12px;color:#526156;padding:10px 0}.leg .icon{width:14px;height:14px;align-self:center}
+.leg time,.field-stop time{font-variant-numeric:tabular-nums;flex:none}.leg time{font-size:11px}.field-stop{padding:13px 0;border-block:1px solid #e2e8df}
+.field-stop time{font:600 18px var(--display);min-width:64px}.field-stop time small{display:block;color:#68756a;font:12px var(--body)}
+.field-stop h4{font:550 17px var(--display);margin:3px 0}.field-stop p{font-size:13px;color:#46574c;overflow-wrap:anywhere}
+.stop-tools{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:10px}.stop-tools label{font-size:12px}.stop-tools select{margin-left:4px}
+.field-summary{background:#eef3e9;padding:22px;border-top:3px solid #77974d;border-radius:3px}.field-summary h3{font-size:16px}
+.field-summary>strong{display:block;font:550 36px var(--display);margin:12px 0}.field-summary strong small{font-size:17px;font-weight:450}
+.field-summary dl{display:grid;grid-template-columns:1fr auto;font-size:13px;gap:10px;margin:14px 0}.field-summary dd{font-weight:550;margin:0;text-align:right}.field-summary p{border-top:1px solid #cad5c5;padding-top:12px;font-size:12px;line-height:1.6;color:#506152}
+.visit-note,.capacity{padding:12px 15px;margin:10px 0;background:#f0f5ea;border-left:3px solid #77974d;font-size:13px}.capacity{background:#fff5db;border-color:#ac6b13}
+.field textarea{font:inherit;border:1px solid #c6cfc6;border-radius:5px;padding:10px;resize:vertical}.map-pin:focus{outline:none}
+@media(max-width:1100px){.essential-review{grid-template-columns:1fr}.journey-brief{flex-wrap:wrap}}
+@media(max-width:750px){.explore-grid{display:block;height:auto}.explore-grid .map-wrap{display:none}.explore-grid.mobile-map .map-wrap{display:block;height:350px}.mobile-map .client-panel{display:none}.client-panel{height:auto;border:0}.client-scroll{max-height:none;height:auto;overflow:visible}.map-switch{display:inline-flex}.planner-toolbar{padding:0 12px;gap:6px}.step-tabs{gap:10px}.step-tab{font-size:12px;gap:5px}.step-tab>span{width:18px;height:18px}.planner-summary{position:sticky;bottom:0;z-index:4;background:white;box-shadow:0 -4px 14px #17261712}.planner-surface{overflow:visible}.journey-brief{padding:18px}.journey-brief .brief-meta{color:#fff}.essential-review{display:flex;flex-direction:column}.essential-review>section,.essential-review>div,.field-summary{width:100%}.field-stop time{min-width:49px}.head-actions{flex-wrap:wrap}}
+@media print{.sidebar,.topbar,.head-actions,.back-link,.app-footer,.stop-tools,.skip,.sidebar-overlay,#toast{display:none!important}.shell,main{margin:0;padding:0}.essential-review{display:block;border:0}.field-stop,.field-summary,.day-heading{break-inside:avoid}.day-heading{break-after:avoid}.field-summary{margin-top:20px}.page-head{margin-top:0}}
+
+.return-list{margin:0 0 20px;padding:18px 22px;background:#f1f6ea;border-left:4px solid #789d49}.return-list h2{font-size:19px}.return-list article{display:flex;align-items:center;gap:14px;margin-top:12px;padding-top:10px;border-top:1px solid #d2dccb}.return-list article div{flex:1;overflow-wrap:anywhere}.return-list time,.return-list p,.closed-field{font-size:13px}.closed-field{align-self:center}.return-list strong{font-weight:550}
